@@ -1,0 +1,11 @@
+#define _CRT_NO_WARNINGS
+#include <stdio.h>
+
+int main()
+{
+	int number;
+	printf("Enter a number: ");
+	scanf_s("%d", &number);
+
+	printf("Result: %d \n", number << 10);
+}
