@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+void main() {
+    char ss[100];
+    char tt[100];
+    int count, i;
+    
+    printf("문자열을 입력하세요 : ");
+    scanf("%s", ss);
+    
+    // 입력받은 문자열의 개수를 구하는 코드
+    count = strlen(ss);
+    
+    // 문자열의 개수만큼 반복해서 tt 배열에 문자열을 반대 순서로 저장한다.
+    for (i = 0; i < count; i++) {
+        tt[i] = ss[count - 1 - i];
+    }
+    
+    // tt 배열의 마지막에 널 문자를 입력한다.
+    tt[count] = '\0';
+    
+    printf("내용을 거꾸로 출력 ==> %s \n", tt);
+}
