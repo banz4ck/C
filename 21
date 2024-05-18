@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+void main() {
+    char in[50], out[50];
+    int i, len;
+    int diff = 'a' - 'A';
+    
+    printf("문자 입력 : ");
+    gets(in);
+    
+    // 입력된 문자열의 길이를 구한다.
+    len = strlen(in);
+    
+    for (i = 0; i < len; i++) {
+        if (('A' <= in[i]) && (in[i] <= 'Z')) {
+            // 문자가 대문자이면 대소문자 차이값을 더한다.
+            out[i] = in[i] + diff;
+        } else if (('a' <= in[i]) && (in[i] <= 'z')) {
+            // 문자가 소문자이면 대소문자 차이값을 뺀다.
+            out[i] = in[i] - diff;
+        } else {
+            // 영문자가 아닌 기호 숫자 등은 그대로 둔다.
+            out[i] = in[i];
+        }
+    }
+    // 마지막에 널 문자를 입력한다.
+    out[len] = '\0';
+    
+    printf("변환된 문자 => %s \n", out);
+}
