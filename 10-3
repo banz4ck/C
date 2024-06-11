@@ -13,5 +13,30 @@ int coffee_machine(int button)
 	default: printf("# 3. (자동으로) 아무거나 탄다\m"); break;
 	}
 
+	printf("# 4. (자동으로) 물을 붓는다\n");
+	printf("# 5. (자동으로) 스푼으로 저어서 녹인다\n\n");
 
+	return 0;
 }
+
+void main()
+{
+	int coffee;
+	int ret;
+
+	printf("A님, 어떤 커피 드릴까요? (1:보통, 2:설탕, 3:블랙) ");
+	scanf_s("%d", &coffee);
+	ret = coffee_machine(coffee);
+	printf("A님 커피 여기 있습니다.\n\n");
+
+	printf("B님, 어떤 커피 드릴까요? (1:보통, 2:설탕, 3:블랙) ");
+	scanf_s("%d", &coffee);
+	ret = coffee_machine(coffee);
+	printf("B님 커피 여기 있습니다.\n\n");
+
+	printf("C님, 어떤 커피 드릴까요? (1:보통, 2:설탕, 3:블랙) ");
+	scanf_s("%d", &coffee);
+	ret = coffee_machine(coffee);
+	printf("C님 커피 여기 있습니다.\n\n");
+}
+
